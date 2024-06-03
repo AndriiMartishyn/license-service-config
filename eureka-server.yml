@@ -1,14 +1,15 @@
+spring:
+  application:
+    name: eureka-server
 server:
   port: 8070
-  waitTimeInMsWhenSyncEmpty: 5
 eureka:
   instance:
     hostname: localhost
-
-client:
-  registerWithEureka: false
-  fetchRegistry: false
-  serviceUrl:
-    defaultZone:
-      http://${eureka.instance.hostname}:${server.port}/eureka/
-
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
