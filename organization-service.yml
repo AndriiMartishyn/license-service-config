@@ -7,3 +7,10 @@ eureka:
       defaultZone: "http://localhost:8070/eureka"
   instance:
     prefer-ip-address: true
+
+management:
+  endpoints:
+       enabled-by-default: true
+  web:
+   exposure:
+    include: "*"
